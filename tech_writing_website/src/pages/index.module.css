@@ -4,7 +4,9 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  background: rgb(228, 241, 252);
+  color: #13243b;
+  padding: 6rem 0 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,12 +14,45 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem 1rem 3rem;
   }
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 4.8vw, 3.3rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+}
+
+.heroContent {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.heroDescription {
+  margin: 0 0 2rem;
+  max-width: 760px;
+  font-size: 1.06rem;
+  line-height: 1.7;
+  color: #2c4466;
+}
+
+.heroEyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #355b84;
 }
 
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }

@@ -1,11 +1,24 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0 5rem;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.aboutBlock {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.aboutHeading {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 3.3vw, 2.3rem);
+  color: #13243b;
+}
+
+.aboutText {
+  margin: 0;
+  max-width: 860px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334f73;
 }

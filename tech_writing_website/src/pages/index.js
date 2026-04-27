@@ -12,16 +12,27 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+        <div className={styles.heroContent}>
+          <p className={styles.heroEyebrow}>Technical Writer</p>
+          <Heading as="h1" className={styles.heroTitle}>
+            {siteConfig.tagline}
+          </Heading>
+          <p className={styles.heroDescription}>
+            I create end-user documentation, product guides, and developer
+            content that make complex products easier to understand and use.
+          </p>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/intro">
+              View Portfolio
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to="/contact-me">
+              Work With Me
+            </Link>
+          </div>
         </div>
       </div>
     </header>
@@ -32,7 +43,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title="Portfolio"
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
