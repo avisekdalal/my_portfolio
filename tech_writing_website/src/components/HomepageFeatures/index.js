@@ -11,12 +11,7 @@ export default function HomepageFeatures() {
             About Me
           </Heading>
           <p className={styles.aboutText}>
-            I specialize in end-user and developer content, with a focus on
-            context-sensitive online help, user guides, troubleshooting manuals,
-            release notes, and API docs. I collaborate closely with engineering
-            and product teams to create documentation that is accurate,
-            practical, and easy to follow. For more information on my experience
-            and skills, see the <Link to="/about-me">About Me</Link> page.
+          I deliver clear, scalable documentation for SaaS, ERP, and cloud platforms. Throughout my career, I have maintained a comprehensive suite of technical deliverables and implemented context-sensitive help and SmartHelp systems to elevate the user experience. I excel in structured authoring and thrive in Agile environments, partnering with product and engineering teams to drive adoption. By adhering to style guides, I ensure every piece of content meets the highest standards of accuracy, quality, and clarity. Learn more on my <Link to="/about-me">About Me</Link> page.
           </p>
         </div>
       </div>
