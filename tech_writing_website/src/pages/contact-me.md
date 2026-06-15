@@ -1,8 +1,8 @@
-# Contact Me
+# Let's Connect
 
-If you would like to collaborate on documentation projects, please reach out through any of the channels below.
+Thank you for reviewing my portfolio. If you are interested in my work and would like to discuss potential career opportunities, please reach out via email or LinkedIn.
 
+- **Email:** [avisekdalal.w@gmail.com](mailto:avisekdalal.w@gmail.com)
 - **LinkedIn:** [avisekdalal](https://www.linkedin.com/in/avisekdalal/)
-- **GitHub:** [avisekdalal](https://github.com/avisekdalal)
 
-I am open to freelance, contract, and full-time technical writing opportunities.
+If your hiring team needs an up-to-date copy of my resume, or if you would like to discuss an open role, kindly send a message to my email. I am actively looking for my next full-time technical writing opportunity and look forward to hearing from you.

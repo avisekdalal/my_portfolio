@@ -12,7 +12,7 @@
 .aboutHeading {
   margin: 0 0 1rem;
   font-size: clamp(1.7rem, 3.3vw, 2.3rem);
-  color: #13243b;
+  color: var(--site-content-heading);
 }
 
 .aboutText {
@@ -20,5 +20,14 @@
   max-width: 860px;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #334f73;
+  color: var(--site-content-text);
+}
+
+.aboutText a {
+  color: var(--site-content-accent);
+}
+
+.aboutText a:hover {
+  color: var(--site-content-heading);
+  text-decoration: underline;
 }

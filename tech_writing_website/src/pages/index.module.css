@@ -4,8 +4,8 @@
  */
 
 .heroBanner {
-  background: rgb(228, 241, 252);
-  color: #13243b;
+  background: var(--site-hero-bg);
+  color: var(--site-hero-text);
   padding: 6rem 0 5rem;
   text-align: center;
   position: relative;
@@ -24,6 +24,7 @@
   margin: 0 0 1rem;
   letter-spacing: 0.01em;
   max-width: 18ch;
+  color: var(--site-hero-text);
 }
 
 .heroContent {
@@ -37,7 +38,7 @@
   max-width: 760px;
   font-size: 1.06rem;
   line-height: 1.7;
-  color: #2c4466;
+  color: var(--site-hero-muted);
 }
 
 .heroEyebrow {
@@ -46,7 +47,7 @@
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: #355b84;
+  color: var(--site-hero-accent);
 }
 
 .buttons {

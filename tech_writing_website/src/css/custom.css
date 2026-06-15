@@ -15,6 +15,24 @@
   --ifm-color-primary-lightest: #306cab;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Shared page palette — hero stays light blue in both themes */
+  --site-hero-bg: rgb(228, 241, 252);
+  --site-hero-text: #13243b;
+  --site-hero-muted: #334f73;
+  --site-hero-accent: #355b84;
+  --site-content-heading: #13243b;
+  --site-content-text: #334f73;
+  --site-content-accent: #355b84;
+  --site-surface-border: rgba(31, 75, 122, 0.14);
+  --site-surface-bg: #ffffff;
+  --site-pill-bg: rgb(228, 241, 252);
+  --site-timeline-line: #1f4b7a;
+  --site-portfolio-card-bg: var(--site-hero-bg);
+  --site-portfolio-card-border: var(--site-surface-border);
+  --site-portfolio-card-title: var(--site-hero-text);
+  --site-portfolio-card-text: var(--site-hero-muted);
+  --site-portfolio-card-hover-bg: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,6 +45,20 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Content on dark page background — light text for readability */
+  --site-content-heading: #ffffff;
+  --site-content-text: #e3e8ef;
+  --site-content-accent: #a8c8e8;
+  --site-surface-border: rgba(255, 255, 255, 0.14);
+  --site-surface-bg: rgba(255, 255, 255, 0.06);
+  --site-pill-bg: rgba(255, 255, 255, 0.1);
+  --site-timeline-line: #a8c8e8;
+  --site-portfolio-card-bg: var(--ifm-color-primary);
+  --site-portfolio-card-border: var(--ifm-color-primary);
+  --site-portfolio-card-title: #ffffff;
+  --site-portfolio-card-text: rgba(255, 255, 255, 0.92);
+  --site-portfolio-card-hover-bg: var(--ifm-color-primary-light);
 }
 
 .footer {

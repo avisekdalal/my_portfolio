@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Avisek Dalal',
-  tagline: 'Clear documentation for users and developers.',
+  tagline: 'Making complex software easy to use for users and developers.',
   favicon: 'img/favicon-ad.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -47,10 +47,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: undefined,
         },
         blog: false,
         theme: {
@@ -111,7 +108,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/intro',
+                to: '/docs/',
               },
             ],
           },
@@ -122,15 +119,15 @@ const config = {
                 label: 'About Me',
                 to: '/about-me',
               },
-              {
-                label: 'Resume',
-                href: 'pathname:///resume-placeholder.pdf',
-              },
             ],
           },
           {
             title: 'Contact',
             items: [
+              {
+                label: 'Get in Touch',
+                to: '/contact-me',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/avisekdalal',
@@ -142,7 +139,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Avisek Dalal. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

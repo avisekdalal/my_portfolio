@@ -18,13 +18,12 @@ function HomepageHeader() {
             {siteConfig.tagline}
           </Heading>
           <p className={styles.heroDescription}>
-            I create end-user documentation, product guides, and developer
-            content that make complex products easier to understand and use.
+            I bridge the gap between software and users. By creating clear product guides and precise developer content, I ensure products are easier to understand and adopt.
           </p>
           <div className={styles.buttons}>
             <Link
               className="button button--primary button--lg"
-              to="/docs/intro">
+              to="/docs/">
               View Portfolio
             </Link>
             <Link
