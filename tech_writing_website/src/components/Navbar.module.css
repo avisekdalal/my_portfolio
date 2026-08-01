@@ -1,0 +1,133 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--site-nav-bg);
+  border-bottom: 1px solid var(--site-nav-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--site-content-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand:hover {
+  color: var(--site-nav-link-hover);
+  text-decoration: none;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--site-nav-border);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--site-nav-link);
+  border-radius: 2px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1rem;
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem 1.15rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--site-nav-link);
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.35rem 0;
+}
+
+.link:hover,
+.active {
+  color: var(--site-nav-link-hover);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 860px) {
+  .toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1rem 1.1rem;
+    background: var(--site-nav-bg);
+    border-bottom: 1px solid var(--site-nav-border);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navLeft,
+  .navRight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .navRight {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--site-nav-border);
+  }
+
+  .link {
+    width: 100%;
+    padding: 0.55rem 0;
+  }
+}

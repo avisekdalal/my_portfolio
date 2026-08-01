@@ -1,0 +1,194 @@
+:root {
+  --color-primary: #1f4b7a;
+  --color-primary-dark: #1b426b;
+  --color-primary-light: #25568c;
+  --site-hero-bg: rgb(228, 241, 252);
+  --site-hero-text: #13243b;
+  --site-hero-muted: #334f73;
+  --site-hero-accent: #355b84;
+  --site-content-heading: #13243b;
+  --site-content-text: #334f73;
+  --site-content-accent: #355b84;
+  --site-surface-border: rgba(31, 75, 122, 0.14);
+  --site-surface-bg: #ffffff;
+  --site-pill-bg: rgb(228, 241, 252);
+  --site-timeline-line: #1f4b7a;
+  --site-portfolio-card-bg: var(--site-hero-bg);
+  --site-portfolio-card-border: var(--site-surface-border);
+  --site-portfolio-card-title: var(--site-hero-text);
+  --site-portfolio-card-text: var(--site-hero-muted);
+  --site-portfolio-card-hover-bg: #ffffff;
+  --site-bg: #ffffff;
+  --site-nav-bg: #ffffff;
+  --site-nav-border: rgba(31, 75, 122, 0.12);
+  --site-nav-link: #334f73;
+  --site-nav-link-hover: #1f4b7a;
+  --site-footer-bg: #0f2138;
+  --site-footer-color: #c7d8eb;
+  --site-footer-link: #dbe7f5;
+  --site-footer-title: #ffffff;
+  --site-footer-copyright: #a8c0da;
+  --page-bg: var(--site-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #25c2a0;
+    --color-primary-dark: #21af90;
+    --color-primary-light: #29d5b0;
+    --site-content-heading: #ffffff;
+    --site-content-text: #e3e8ef;
+    --site-content-accent: #a8c8e8;
+    --site-surface-border: rgba(255, 255, 255, 0.14);
+    --site-surface-bg: rgba(255, 255, 255, 0.06);
+    --site-pill-bg: rgba(255, 255, 255, 0.1);
+    --site-timeline-line: #a8c8e8;
+    --site-portfolio-card-bg: var(--color-primary);
+    --site-portfolio-card-border: var(--color-primary);
+    --site-portfolio-card-title: #ffffff;
+    --site-portfolio-card-text: rgba(255, 255, 255, 0.92);
+    --site-portfolio-card-hover-bg: var(--color-primary-light);
+    --site-bg: #1b1b1d;
+    --site-nav-bg: #242526;
+    --site-nav-border: rgba(255, 255, 255, 0.12);
+    --site-nav-link: #e3e8ef;
+    --site-nav-link-hover: #ffffff;
+    --page-bg: var(--site-bg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--site-content-text);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--site-content-accent);
+}
+
+a:hover {
+  color: var(--site-content-heading);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--site-content-heading);
+  line-height: 1.25;
+}
+
+.container {
+  width: min(1140px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.35rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.button--primary:hover {
+  background: var(--color-primary-dark);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--site-hero-text);
+  border-color: rgba(31, 75, 122, 0.35);
+}
+
+.button--secondary:hover {
+  background: rgba(31, 75, 122, 0.08);
+  color: var(--site-hero-text);
+  text-decoration: none;
+}
+
+.button--lg {
+  padding: 0.85rem 1.55rem;
+  font-size: 1.05rem;
+}
+
+.prose {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.prose h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+}
+
+.prose h2 {
+  margin: 2rem 0 0.85rem;
+  font-size: 1.35rem;
+}
+
+.prose h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.prose p,
+.prose li {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--site-content-text);
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--site-surface-border);
+}
+
+.prose a {
+  font-weight: 600;
+}

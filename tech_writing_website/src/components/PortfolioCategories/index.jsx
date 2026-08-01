@@ -1,5 +1,4 @@
-import Link from '@docusaurus/Link';
-import Heading from '@theme/Heading';
+import {Link} from 'react-router-dom';
 import styles from './styles.module.css';
 
 const categories = [
@@ -32,9 +31,7 @@ const categories = [
 export default function PortfolioCategories() {
   return (
     <>
-      <Heading as="h1" className={styles.heroTitle}>
-        Documentation Portfolio
-      </Heading>
+      <h1 className={styles.heroTitle}>Documentation Portfolio</h1>
       <p className={styles.heroIntro}>
         The samples below demonstrate my ability to translate complex
         information, workflows, and processes into clear, high-utility
@@ -46,13 +43,8 @@ export default function PortfolioCategories() {
 
       <div className={styles.grid}>
         {categories.map((category) => (
-          <Link
-            key={category.title}
-            to={category.to}
-            className={styles.card}>
-            <Heading as="h2" className={styles.cardTitle}>
-              {category.title}
-            </Heading>
+          <Link key={category.title} to={category.to} className={styles.card}>
+            <h2 className={styles.cardTitle}>{category.title}</h2>
             <p className={styles.cardDescription}>{category.description}</p>
             <span className={styles.cardAction}>View samples →</span>
           </Link>

@@ -2,11 +2,8 @@
 /node_modules
 
 # Production
+/dist
 /build
-
-# Generated files
-.docusaurus
-.cache-loader
 
 # Misc
 .DS_Store
