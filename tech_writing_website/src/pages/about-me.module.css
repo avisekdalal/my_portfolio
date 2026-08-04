@@ -1,3 +1,8 @@
+/**
+ * Hero uses light-blue palette in both themes.
+ * Content sections use theme-aware variables for readable text on dark backgrounds.
+ */
+
 .hero {
   background: var(--site-hero-bg);
   color: var(--site-hero-text);
@@ -55,6 +60,7 @@
   color: var(--site-content-text);
 }
 
+/* Competency cards — light surface, always dark text */
 .competencyGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -68,10 +74,8 @@
   background: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  .competencyCard {
-    border-color: rgba(255, 255, 255, 0.18);
-  }
+[data-theme='dark'] .competencyCard {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .competencyLabel {
@@ -92,6 +96,7 @@
   color: #334f73;
 }
 
+/* Tool stack marquees */
 .toolSection {
   margin-bottom: 1.75rem;
 }
@@ -122,10 +127,8 @@
   );
 }
 
-@media (prefers-color-scheme: dark) {
-  .marqueeWrap {
-    border-color: rgba(255, 255, 255, 0.18);
-  }
+[data-theme='dark'] .marqueeWrap {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .marqueeTrack {
@@ -167,6 +170,7 @@
   }
 }
 
+/* Career timeline */
 .timeline {
   position: relative;
   margin: 0;
@@ -207,7 +211,7 @@
   height: 11px;
   border-radius: 50%;
   background: var(--site-timeline-line);
-  box-shadow: 0 0 0 4px var(--page-bg);
+  box-shadow: 0 0 0 4px var(--ifm-background-color);
 }
 
 .year {

@@ -1,0 +1,95 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1f4b7a;
+  --ifm-color-primary-dark: #1b426b;
+  --ifm-color-primary-darker: #193e64;
+  --ifm-color-primary-darkest: #143352;
+  --ifm-color-primary-light: #25568c;
+  --ifm-color-primary-lighter: #285c96;
+  --ifm-color-primary-lightest: #306cab;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Shared page palette — hero stays light blue in both themes */
+  --site-hero-bg: rgb(228, 241, 252);
+  --site-hero-text: #13243b;
+  --site-hero-muted: #334f73;
+  --site-hero-accent: #355b84;
+  --site-content-heading: #13243b;
+  --site-content-text: #334f73;
+  --site-content-accent: #355b84;
+  --site-surface-border: rgba(31, 75, 122, 0.14);
+  --site-surface-bg: #ffffff;
+  --site-pill-bg: rgb(228, 241, 252);
+  --site-timeline-line: #1f4b7a;
+  --site-portfolio-card-bg: var(--site-hero-bg);
+  --site-portfolio-card-border: var(--site-surface-border);
+  --site-portfolio-card-title: var(--site-hero-text);
+  --site-portfolio-card-text: var(--site-hero-muted);
+  --site-portfolio-card-hover-bg: #ffffff;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Content on dark page background — light text for readability */
+  --site-content-heading: #ffffff;
+  --site-content-text: #e3e8ef;
+  --site-content-accent: #a8c8e8;
+  --site-surface-border: rgba(255, 255, 255, 0.14);
+  --site-surface-bg: rgba(255, 255, 255, 0.06);
+  --site-pill-bg: rgba(255, 255, 255, 0.1);
+  --site-timeline-line: #a8c8e8;
+  --site-portfolio-card-bg: var(--ifm-color-primary);
+  --site-portfolio-card-border: var(--ifm-color-primary);
+  --site-portfolio-card-title: #ffffff;
+  --site-portfolio-card-text: rgba(255, 255, 255, 0.92);
+  --site-portfolio-card-hover-bg: var(--ifm-color-primary-light);
+}
+
+.footer {
+  --ifm-footer-background-color: #0f2138;
+  --ifm-footer-color: #c7d8eb;
+  --ifm-footer-link-color: #dbe7f5;
+  --ifm-footer-title-color: #ffffff;
+  padding: 3.2rem 0 1.6rem;
+}
+
+.footer__title {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.footer__link-item {
+  font-size: 0.96rem;
+  line-height: 1.9;
+  opacity: 0.95;
+}
+
+.footer__link-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  border-top: 1px solid rgba(219, 231, 245, 0.2);
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  color: #a8c0da;
+  font-size: 0.86rem;
+}
