@@ -38,10 +38,8 @@
   background: var(--site-portfolio-card-hover-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  .card:hover {
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  }
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .cardTitle {
