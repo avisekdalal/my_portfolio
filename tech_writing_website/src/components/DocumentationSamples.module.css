@@ -1,0 +1,33 @@
+.section {
+  padding: 4.5rem 0 5.5rem;
+  border-top: 1px solid var(--site-surface-border);
+  color: var(--site-hero-text);
+}
+
+.inner {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--site-content-heading);
+}
+
+.subtext {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--site-hero-muted);
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3.25rem 0 4rem;
+  }
+}
