@@ -1,11 +1,11 @@
-import styles from './ContactMe.module.css';
+import styles from './ContactSection.module.css';
 
-export default function ContactMe() {
+export default function ContactSection() {
   return (
-    <main className={styles.page}>
+    <section id="contact" className={styles.page}>
       <div className="container">
         <div className={styles.content}>
-          <h1 className={styles.title}>Let&apos;s Connect</h1>
+          <h2 className={styles.title}>Let&apos;s Connect</h2>
           <p className={styles.text}>
             Thank you for reviewing my portfolio. If you are interested in my work
             and would like to discuss potential career opportunities, please reach
@@ -35,6 +35,6 @@ export default function ContactMe() {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

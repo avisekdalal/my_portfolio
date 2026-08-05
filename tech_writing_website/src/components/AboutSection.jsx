@@ -1,4 +1,4 @@
-import styles from './AboutMe.module.css';
+import styles from './AboutSection.module.css';
 
 const competencyGroups = [
   {
@@ -121,13 +121,13 @@ function ToolMarquee({ tools }) {
   );
 }
 
-export default function AboutMe() {
+export default function AboutSection() {
   return (
-    <>
-      <header className={styles.hero}>
+    <section id="about" className={styles.aboutRoot}>
+      <div className={styles.hero}>
         <div className="container">
           <div className={styles.heroInner}>
-            <h1 className={styles.heroTitle}>About Me</h1>
+            <h2 className={styles.heroTitle}>About Me</h2>
             <p className={styles.intro}>
               Technical writer with over 7 years of experience creating clear,
               scalable documentation for complex software products. Throughout my
@@ -151,14 +151,14 @@ export default function AboutMe() {
             </p>
           </div>
         </div>
-      </header>
+      </div>
 
-      <main className={styles.content}>
+      <div className={styles.content}>
         <div className="container">
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>
               Core Competencies & Deliverables
-            </h2>
+            </h3>
             <div className={styles.competencyGrid}>
               {competencyGroups.map((group) => (
                 <article key={group.label} className={styles.competencyCard}>
@@ -171,24 +171,24 @@ export default function AboutMe() {
                 </article>
               ))}
             </div>
-          </section>
+          </div>
 
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Tool Stack</h2>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>Tool Stack</h3>
             <p className={styles.sectionSubtitle}>
               Technologies and platforms I use across authoring, publishing, and
               collaboration workflows.
             </p>
             {toolCategories.map((category) => (
               <div key={category.title} className={styles.toolSection}>
-                <h3 className={styles.toolCategory}>{category.title}</h3>
+                <h4 className={styles.toolCategory}>{category.title}</h4>
                 <ToolMarquee tools={category.tools} />
               </div>
             ))}
-          </section>
+          </div>
 
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Career Journey</h2>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>Career Journey</h3>
             <ol className={styles.timeline}>
               {experience.map((role) => (
                 <li
@@ -202,9 +202,9 @@ export default function AboutMe() {
                 </li>
               ))}
             </ol>
-          </section>
+          </div>
         </div>
-      </main>
-    </>
+      </div>
+    </section>
   );
 }

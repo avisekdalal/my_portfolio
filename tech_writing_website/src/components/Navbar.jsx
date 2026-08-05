@@ -1,10 +1,9 @@
-import { NavLink, Link } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 
 const navItems = [
-  { to: '/portfolio', label: 'Documentation' },
-  { to: '/about-me', label: 'About Me' },
+  { href: '#about', label: 'About Me' },
+  { href: '#portfolio', label: 'Documentation' },
 ];
 
 const externalItems = [
@@ -24,7 +23,11 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <Link to="/" className={styles.brand} onClick={() => setOpen(false)}>
+        <a
+          href="#welcome"
+          className={styles.brand}
+          onClick={() => setOpen(false)}
+        >
           <img
             src="/img/profile-placeholder.svg"
             alt=""
@@ -33,7 +36,7 @@ export default function Navbar() {
             height={32}
           />
           <span>Welcome</span>
-        </Link>
+        </a>
 
         <button
           type="button"
@@ -50,16 +53,14 @@ export default function Navbar() {
         <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
           <div className={styles.navLeft}>
             {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className={({ isActive }) =>
-                  isActive ? `${styles.link} ${styles.active}` : styles.link
-                }
+              <a
+                key={item.href}
+                href={item.href}
+                className={styles.link}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </NavLink>
+              </a>
             ))}
           </div>
           <div className={styles.navRight}>
@@ -74,15 +75,13 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <NavLink
-              to="/contact-me"
-              className={({ isActive }) =>
-                isActive ? `${styles.link} ${styles.active}` : styles.link
-              }
+            <a
+              href="#contact"
+              className={styles.link}
               onClick={() => setOpen(false)}
             >
               Contact Me
-            </NavLink>
+            </a>
           </div>
         </nav>
       </div>

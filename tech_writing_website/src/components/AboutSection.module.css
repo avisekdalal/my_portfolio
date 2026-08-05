@@ -1,3 +1,7 @@
+.aboutRoot {
+  scroll-margin-top: 4.5rem;
+}
+
 .hero {
   background: var(--site-hero-bg);
   color: var(--site-hero-text);

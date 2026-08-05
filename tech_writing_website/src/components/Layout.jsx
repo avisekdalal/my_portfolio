@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -11,9 +10,7 @@ function syncTheme() {
   );
 }
 
-export default function Layout() {
-  const { pathname } = useLocation();
-
+export default function Layout({ children }) {
   useEffect(() => {
     syncTheme();
     const media = window.matchMedia('(prefers-color-scheme: dark)');
@@ -22,16 +19,10 @@ export default function Layout() {
     return () => media.removeEventListener('change', onChange);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
   return (
     <div className="app-shell">
       <Navbar />
-      <div className="app-main">
-        <Outlet />
-      </div>
+      <div className="app-main">{children}</div>
       <Footer />
     </div>
   );

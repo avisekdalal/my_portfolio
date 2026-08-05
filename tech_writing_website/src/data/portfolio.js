@@ -88,7 +88,3 @@ export const portfolioCategories = [
     ],
   },
 ];
-
-export function getCategoryBySlug(slug) {
-  return portfolioCategories.find((category) => category.slug === slug);
-}
