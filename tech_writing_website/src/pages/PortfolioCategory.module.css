@@ -1,0 +1,72 @@
+.page {
+  padding: 3rem 0 5rem;
+}
+
+.content {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  line-height: 1.2;
+  color: var(--site-content-heading);
+}
+
+.intro {
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--site-content-text);
+}
+
+.sectionTitle {
+  margin: 0 0 1.25rem;
+  font-size: 1.35rem;
+  color: var(--site-content-heading);
+}
+
+.samples {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sample {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--site-surface-border);
+}
+
+.sample:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sampleTitle {
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+  color: var(--site-content-heading);
+}
+
+.sampleBody {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--site-content-text);
+}
+
+.back {
+  margin: 2.5rem 0 0;
+  font-size: 0.98rem;
+}
+
+.back a {
+  color: var(--site-content-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back a:hover {
+  color: var(--site-content-heading);
+  text-decoration: underline;
+}
