@@ -1,0 +1,135 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--site-nav-bg);
+  border-bottom: 1px solid var(--site-surface-border);
+  backdrop-filter: blur(10px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--site-content-heading);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand:hover {
+  text-decoration: none;
+  color: var(--site-content-accent);
+}
+
+.logo {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem 1.15rem;
+  flex-wrap: wrap;
+}
+
+.navRight {
+  margin-left: auto;
+}
+
+.link {
+  color: var(--site-content-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.35rem 0;
+}
+
+.link:hover {
+  color: var(--site-content-heading);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--site-content-heading);
+  font-weight: 700;
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.45rem;
+  border: 1px solid var(--site-surface-border);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--site-content-heading);
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 900px) {
+  .toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1.25rem 1.25rem;
+    background: var(--site-nav-bg);
+    border-bottom: 1px solid var(--site-surface-border);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navLeft,
+  .navRight {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    gap: 0.35rem;
+  }
+
+  .navRight {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--site-surface-border);
+  }
+}
