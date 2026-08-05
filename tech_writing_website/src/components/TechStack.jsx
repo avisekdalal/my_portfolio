@@ -28,7 +28,11 @@ const categories = [
 
 export default function TechStack() {
   return (
-    <section className={styles.section} aria-labelledby="tech-stack-heading">
+    <section
+      id="stack"
+      className={styles.section}
+      aria-labelledby="tech-stack-heading"
+    >
       <div className="container">
         <div className={styles.inner}>
           <header className={styles.intro}>

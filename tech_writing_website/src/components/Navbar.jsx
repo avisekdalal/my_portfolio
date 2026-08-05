@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 
+const sectionItems = [
+  { href: '#welcome', label: 'About' },
+  { href: '#samples', label: 'Samples' },
+  { href: '#stack', label: 'Stack' },
+  { href: '#contact', label: 'Contact' },
+];
+
 const externalItems = [
   {
     href: 'https://www.linkedin.com/in/avisekdalal/',
@@ -30,7 +37,7 @@ export default function Navbar() {
             width={32}
             height={32}
           />
-          <span>Welcome</span>
+          <span>Avisek Dalal</span>
         </a>
 
         <button
@@ -46,7 +53,18 @@ export default function Navbar() {
         </button>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
-          <div className={styles.navLeft} />
+          <div className={styles.navLeft}>
+            {sectionItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={styles.link}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
           <div className={styles.navRight}>
             {externalItems.map((item) => (
               <a
@@ -60,6 +78,15 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
+            <a
+              href="/resume-placeholder.pdf"
+              className={styles.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              Resume
+            </a>
           </div>
         </nav>
       </div>

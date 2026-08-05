@@ -2,6 +2,7 @@
   padding: 3.5rem 0 4.5rem;
   border-top: 1px solid var(--site-surface-border);
   color: var(--site-hero-text);
+  scroll-margin-top: 4.5rem;
 }
 
 .title {

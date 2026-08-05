@@ -11,6 +11,19 @@ export default function Hero() {
             <p className={styles.role}>
               Senior Technical Writer | Documentation Engineer
             </p>
+            <div className={styles.actions}>
+              <a className="button button--primary" href="#samples">
+                View samples
+              </a>
+              <a
+                className="button button--secondary"
+                href="/resume-placeholder.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download resume
+              </a>
+            </div>
           </div>
 
           <aside className={styles.right}>

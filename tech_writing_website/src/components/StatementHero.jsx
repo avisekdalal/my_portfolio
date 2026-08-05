@@ -1,8 +1,27 @@
 import styles from './StatementHero.module.css';
 
+const skills = [
+  'Technical writing',
+  'Information Architecture (IA)',
+  'Content Strategy',
+  'Information Development',
+];
+
+const suite = [
+  'Online help',
+  'User guides',
+  'Installation & integration guides',
+  'API & SDK documentation',
+  'Release information',
+];
+
 export default function StatementHero() {
   return (
-    <section className={styles.section} aria-labelledby="statement-heading">
+    <section
+      id="focus"
+      className={styles.section}
+      aria-labelledby="statement-heading"
+    >
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.left}>
@@ -22,17 +41,23 @@ export default function StatementHero() {
           <aside className={styles.right}>
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>Core Skills</h3>
-              <p className={styles.blockText}>
-                Technical writing, Information Architecture (IA), Content
-                Strategy, Information Development
-              </p>
+              <ul className={styles.tagList}>
+                {skills.map((skill) => (
+                  <li key={skill} className={styles.tag}>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>Documentation Suite</h3>
-              <p className={styles.blockText}>
-                Online help, user guide, Installation &amp; integration guides,
-                API &amp; SDK documentation, Release Information
-              </p>
+              <ul className={styles.tagList}>
+                {suite.map((item) => (
+                  <li key={item} className={styles.tag}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>

@@ -11,7 +11,11 @@ const companies = [
 
 export default function Companies() {
   return (
-    <section className={styles.section} aria-labelledby="companies-heading">
+    <section
+      id="companies"
+      className={styles.section}
+      aria-labelledby="companies-heading"
+    >
       <div className="container">
         <h2 id="companies-heading" className={styles.title}>
           Companies I Worked For

@@ -44,6 +44,13 @@
   color: var(--site-hero-text);
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
 .right {
   text-align: left;
   padding-bottom: 0.25rem;
