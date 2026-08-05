@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 
-const navItems = [
-  { href: '#about', label: 'About Me' },
-  { href: '#portfolio', label: 'Documentation' },
-];
-
 const externalItems = [
   {
     href: 'https://www.linkedin.com/in/avisekdalal/',
@@ -51,18 +46,7 @@ export default function Navbar() {
         </button>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
-          <div className={styles.navLeft}>
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={styles.link}
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+          <div className={styles.navLeft} />
           <div className={styles.navRight}>
             {externalItems.map((item) => (
               <a
@@ -71,17 +55,11 @@ export default function Navbar() {
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              className={styles.link}
-              onClick={() => setOpen(false)}
-            >
-              Contact Me
-            </a>
           </div>
         </nav>
       </div>

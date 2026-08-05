@@ -4,24 +4,25 @@ export default function Hero() {
   return (
     <section id="welcome" className={styles.heroBanner}>
       <div className="container">
-        <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow}>Technical Writer</p>
-          <h1 className={styles.heroTitle}>
-            Making complex software easy to use for users and developers.
-          </h1>
-          <p className={styles.heroDescription}>
-            I bridge the gap between software and users. By creating clear
-            product guides and precise developer content, I ensure products are
-            easier to understand and adopt.
-          </p>
-          <div className={styles.buttons}>
-            <a className="button button--primary button--lg" href="#portfolio">
-              View Portfolio
-            </a>
-            <a className="button button--secondary button--lg" href="#contact">
-              Work With Me
-            </a>
+        <div className={styles.grid}>
+          <div className={styles.left}>
+            <span className={styles.rule} aria-hidden="true" />
+            <h1 className={styles.name}>Avisek Dalal</h1>
+            <p className={styles.role}>
+              Senior Technical Writer | Documentation Engineer
+            </p>
           </div>
+
+          <aside className={styles.right}>
+            <h2 className={styles.label}>About Me</h2>
+            <p className={styles.aboutText}>
+              For the past eight years, I&apos;ve worked alongside engineers,
+              product managers, and designers to turn complex software into
+              documentation people actually use. My work spans enterprise
+              structured authoring, Docs-as-Code, API documentation, user guides,
+              and information architecture.
+            </p>
+          </aside>
         </div>
       </div>
     </section>

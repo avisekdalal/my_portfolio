@@ -1,15 +1,13 @@
 import Hero from '../components/Hero';
-import AboutSection from '../components/AboutSection';
-import PortfolioCategories from '../components/PortfolioCategories';
-import ContactSection from '../components/ContactSection';
+import StatementHero from '../components/StatementHero';
+import TechStack from '../components/TechStack';
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <AboutSection />
-      <PortfolioCategories />
-      <ContactSection />
+      <StatementHero />
+      <TechStack />
     </main>
   );
 }
