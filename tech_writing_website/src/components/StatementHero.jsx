@@ -1,21 +1,22 @@
+import { useState } from 'react';
 import styles from './StatementHero.module.css';
+import { workflowSteps } from './workflowIcons';
 
-const skills = [
-  'Technical writing',
-  'Information Architecture (IA)',
-  'Content Strategy',
-  'Information Development',
-];
-
-const suite = [
-  'Online help',
-  'User guides',
-  'Installation & integration guides',
-  'API & SDK documentation',
-  'Release information',
+const helpItems = [
+  'Build scalable documentation',
+  'Publish documents that end users can actually use',
+  'Reduce confusion',
+  'Improve developer onboarding',
+  'Implement docs-as-code',
+  'Migrate from legacy documentation practise to structured authoring',
+  'Reduce content duplication',
+  'Create reusable content',
 ];
 
 export default function StatementHero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeStep = workflowSteps[activeIndex];
+
   return (
     <section
       id="focus"
@@ -23,42 +24,85 @@ export default function StatementHero() {
       aria-labelledby="statement-heading"
     >
       <div className="container">
+        <h2 id="statement-heading" className={styles.headline}>
+          <span className={styles.headlineLine}>
+            Helping software teams build documentation users actually trust.
+          </span>
+        </h2>
+
         <div className={styles.grid}>
           <div className={styles.left}>
-            <h2 id="statement-heading" className={styles.headline}>
-              <span className={styles.headlineLine}>Clear Documentation.</span>
-              <span className={styles.headlineLine}>
-                Better Software Experience.
-              </span>
-            </h2>
-            <p className={styles.blurb}>
-              I bridge the gap between software and users. By creating clear
-              product guides and precise developer content, I ensure products are
-              easier to understand and adopt.
-            </p>
+            <h3 className={styles.helpTitle}>I help teams:</h3>
+            <ul className={styles.helpList}>
+              {helpItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
 
-          <aside className={styles.right}>
-            <div className={styles.block}>
-              <h3 className={styles.blockTitle}>Core Skills</h3>
-              <ul className={styles.tagList}>
-                {skills.map((skill) => (
-                  <li key={skill} className={styles.tag}>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+          <aside className={styles.right} aria-label="Documentation lifecycle">
+            <div className={styles.cycleWrap}>
+              <div className={styles.cycle} role="list">
+                <div className={styles.cycleRing} aria-hidden="true" />
+                <div className={styles.cycleCore}>
+                  <p className={styles.cycleCoreLabel}>Docs lifecycle</p>
+                  <p className={styles.cycleCoreStep}>{activeStep.label}</p>
+                  <p className={styles.cycleCoreDetail}>{activeStep.detail}</p>
+                </div>
+
+                {workflowSteps.map((step, index) => {
+                  const angleDeg =
+                    (360 / workflowSteps.length) * index - 90;
+                  const angleRad = (angleDeg * Math.PI) / 180;
+                  const radius = 42;
+                  const left = 50 + radius * Math.cos(angleRad);
+                  const top = 50 + radius * Math.sin(angleRad);
+                  const isActive = index === activeIndex;
+                  const { Icon } = step;
+
+                  return (
+                    <button
+                      key={step.label}
+                      type="button"
+                      role="listitem"
+                      className={`${styles.cycleNode} ${isActive ? styles.cycleNodeActive : ''}`}
+                      style={{ left: `${left}%`, top: `${top}%` }}
+                      aria-pressed={isActive}
+                      aria-label={`${step.label}: ${step.detail}`}
+                      onMouseEnter={() => setActiveIndex(index)}
+                      onFocus={() => setActiveIndex(index)}
+                      onClick={() => setActiveIndex(index)}
+                    >
+                      <span className={styles.cycleNodeIcon}>
+                        <Icon />
+                      </span>
+                      <span className={styles.cycleNodeLabel}>{step.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <p className={styles.cycleHint}>
+                Continuous cycle — Maintain feeds the next Discover.
+              </p>
             </div>
-            <div className={styles.block}>
-              <h3 className={styles.blockTitle}>Documentation Suite</h3>
-              <ul className={styles.tagList}>
-                {suite.map((item) => (
-                  <li key={item} className={styles.tag}>
-                    {item}
+
+            <ol className={styles.mobileWorkflow}>
+              {workflowSteps.map((step) => {
+                const { Icon } = step;
+                return (
+                  <li key={step.label} className={styles.mobileStep}>
+                    <span className={styles.mobileIcon}>
+                      <Icon />
+                    </span>
+                    <div>
+                      <span className={styles.mobileLabel}>{step.label}</span>
+                      <span className={styles.mobileDetail}>{step.detail}</span>
+                    </div>
                   </li>
-                ))}
-              </ul>
-            </div>
+                );
+              })}
+            </ol>
           </aside>
         </div>
       </div>
