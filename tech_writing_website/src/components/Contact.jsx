@@ -32,14 +32,6 @@ export default function Contact() {
             >
               LinkedIn
             </a>
-            <a
-              className="button button--secondary button--lg"
-              href="/resume-placeholder.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
           </div>
         </div>
       </div>

@@ -69,26 +69,6 @@
   text-decoration: none;
 }
 
-.resume {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: var(--site-content-heading);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 650;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.resume:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.55);
-  color: var(--site-content-heading);
-  text-decoration: none;
-}
-
 .active {
   color: var(--site-content-heading);
   font-weight: 700;
@@ -151,9 +131,5 @@
     margin-top: 0.75rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--site-surface-border);
-  }
-
-  .resume {
-    margin-top: 0.35rem;
   }
 }

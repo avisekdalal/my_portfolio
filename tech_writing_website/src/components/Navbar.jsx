@@ -78,15 +78,6 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="/resume-placeholder.pdf"
-              className={styles.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-            >
-              Resume
-            </a>
           </div>
         </nav>
       </div>
