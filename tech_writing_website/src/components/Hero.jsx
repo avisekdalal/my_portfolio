@@ -6,7 +6,6 @@ export default function Hero() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.left}>
-            <span className={styles.rule} aria-hidden="true" />
             <h1 className={styles.name}>Avisek Dalal</h1>
             <p className={styles.role}>
               Senior Technical Writer | Documentation Engineer
