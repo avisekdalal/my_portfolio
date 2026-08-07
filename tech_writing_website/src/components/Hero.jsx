@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import resumePdf from '../assets/Avisek Dalal-Senior Technical Writer-Resume.pdf';
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
               </a>
               <a
                 className="button button--secondary"
-                href="/resume-placeholder.pdf"
+                href={resumePdf}
                 target="_blank"
                 rel="noopener noreferrer"
               >
