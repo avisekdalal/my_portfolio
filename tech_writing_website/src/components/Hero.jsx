@@ -1,5 +1,7 @@
 import styles from './Hero.module.css';
-import resumePdf from '../assets/Avisek Dalal-Senior Technical Writer-Resume.pdf';
+
+const resumePdf =
+  '/files/Avisek%20Dalal-Senior%20Technical%20Writer-Resume.pdf';
 
 export default function Hero() {
   return (
@@ -13,7 +15,7 @@ export default function Hero() {
             </p>
             <div className={styles.actions}>
               <a className="button button--primary" href="#samples">
-                View samples
+                View projects
               </a>
               <a
                 className="button button--secondary"

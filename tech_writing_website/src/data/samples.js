@@ -1,50 +1,36 @@
 export const samples = [
   {
-    id: 'user-guide',
-    title: 'Product User Guide',
-    type: 'User Guide',
-    summary:
-      'Task-oriented walkthrough covering setup, core workflows, and troubleshooting for end users.',
-    href: null,
+    id: 'infor-scs',
+    title: 'Infor Sales & Catering Solutions',
+    type: 'Enterprise Documentation',
+    contribution:
+      'Built the product documentation from the ground up by designing the information architecture, creating DITA maps, and authoring modular documentation using IXIA CCMS.',
+    highlights: [
+      'Information Architecture',
+      'DITA Maps',
+      'Topic-based Authoring',
+      'Context-sensitive Help',
+      'Single Sourcing',
+    ],
+    sampleHref: '/files/Infor-SCS-PortfolioSample.pdf',
+    liveHref: 'https://docs.infor.com/scs/2026.x/en-us/scsolh/default.html',
   },
   {
-    id: 'api-sdk',
-    title: 'API & SDK Reference',
-    type: 'API / SDK',
-    summary:
-      'Structured endpoint reference with auth, request examples, and SDK quickstarts for developers.',
-    href: null,
-  },
-  {
-    id: 'install-integration',
-    title: 'Installation & Integration Guide',
-    type: 'Installation',
-    summary:
-      'Step-by-step deployment and integration path for on-prem and cloud environments.',
-    href: null,
-  },
-  {
-    id: 'release-notes',
-    title: 'Release Information',
-    type: 'Release Notes',
-    summary:
-      'Clear release summaries with new features, fixes, known issues, and upgrade notes.',
-    href: null,
-  },
-  {
-    id: 'online-help',
-    title: 'In-Product Online Help',
-    type: 'Online Help',
-    summary:
-      'Contextual help topics mapped to product UI so users find answers without leaving the app.',
-    href: null,
-  },
-  {
-    id: 'structured-authoring',
-    title: 'Structured Authoring Sample',
-    type: 'DITA / CCMS',
-    summary:
-      'Reusable topic model showing modular content for enterprise structured authoring workflows.',
-    href: null,
+    id: 'infor-factory-track',
+    title: 'Infor Factory Track (CSI)',
+    type: 'Enterprise Documentation',
+    contribution:
+      'Lead writer responsible for end-to-end documentation, feature validation, and release content for Factory Track and its integrations. Authored User Guide, Admin Guide, & Developer Content.',
+    highlights: [
+      'DITA XML',
+      'IXIA CCMS',
+      'Product Validation',
+      'Release Documentation',
+      'Peer Reviews',
+      'Mentoring other Writers',
+    ],
+    sampleHref: '/files/Infor-FT%28CSI%29-PortfolioSample.pdf',
+    liveHref:
+      'https://docs.infor.com/factorytrack/2026.x/en-us/ftslolh/default.html',
   },
 ];

@@ -4,7 +4,7 @@ import styles from './Navbar.module.css';
 const sectionItems = [
   { href: '#welcome', label: 'About' },
   { href: '#stack', label: 'Stack' },
-  { href: '#samples', label: 'Samples' },
+  { href: '#samples', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
 ];
 
