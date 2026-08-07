@@ -1,12 +1,36 @@
 import styles from './Companies.module.css';
 
 const companies = [
-  { name: 'Cyient', logo: '/img/companies/cyient.svg' },
-  { name: 'Infor', logo: '/img/companies/infor.svg' },
-  { name: 'Broadcom', logo: '/img/companies/broadcom.svg' },
-  { name: 'OpenText', logo: '/img/companies/opentext.svg' },
-  { name: 'PMI Standards', logo: '/img/companies/pmi-standards.svg' },
-  { name: 'Equitable', logo: '/img/companies/equitable.svg' },
+  {
+    name: 'Cyient',
+    logo: '/img/companies/cyient.png',
+    background: '#008ca1',
+  },
+  {
+    name: 'Infor',
+    logo: '/img/companies/infor.png',
+    background: '#c8102e',
+  },
+  {
+    name: 'Broadcom',
+    logo: '/img/companies/broadcom.png',
+    background: '#ffffff',
+  },
+  {
+    name: 'OpenText',
+    logo: '/img/companies/opentext.png',
+    background: '#0073e6',
+  },
+  {
+    name: 'PMI Standards',
+    logo: '/img/companies/pmi-standards.png',
+    background: '#ffffff',
+  },
+  {
+    name: 'Equitable',
+    logo: '/img/companies/equitable.png',
+    background: '#00a3ad',
+  },
 ];
 
 export default function Companies() {
@@ -23,11 +47,17 @@ export default function Companies() {
         <ul className={styles.list}>
           {companies.map((company) => (
             <li key={company.name} className={styles.item}>
-              <img
-                src={company.logo}
-                alt={company.name}
-                className={styles.logo}
-              />
+              <div
+                className={styles.logoFrame}
+                style={{ backgroundColor: company.background }}
+              >
+                <img
+                  src={company.logo}
+                  alt=""
+                  className={styles.logo}
+                />
+              </div>
+              <span className={styles.name}>{company.name}</span>
             </li>
           ))}
         </ul>
